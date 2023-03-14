@@ -144,7 +144,9 @@ module CoresenseRest
 
   class OrderFulfillment < Resource
     # action endpoint, use to fulfill orders
-    attr_accessor
+    attr_accessor :quantity, :build_type, :sku_id
+    
+    extend Findable
   end
 
   class OrderItemAdjustment < Resource
